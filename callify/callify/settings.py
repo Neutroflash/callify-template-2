@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "tailwind",
     "django_htmx",
+    "dashboard",
+    "accounts",
+    "theme"
 ]
 
 # Configuración de Archivos Estáticos y Templates
