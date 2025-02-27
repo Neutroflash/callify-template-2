@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "tailwind",
     "django_htmx",
-    "callify.callify.dashboard",
+    "dashboard",
     "accounts",
     "theme"
 ]
