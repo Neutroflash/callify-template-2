@@ -58,7 +58,7 @@ MIDDLEWARE = [
     "django_htmx.middleware.HtmxMiddleware",  # Middleware de HTMX
 ]
 
-ROOT_URLCONF = 'callify.urls'
+#ROOT_URLCONF = 'callify.urls'
 
 TEMPLATES = [
     {
