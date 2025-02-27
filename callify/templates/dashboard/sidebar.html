@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callify Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex">
+
+    <!-- Sidebar -->
+    <div class="flex flex-col h-screen w-64 bg-gray-100 border-r p-4">
+        <!-- Cuenta -->
+        <div class="border-b pb-4 mb-4">
+            <a href="{% url 'profile' %}" class="flex items-center w-full p-2 hover:bg-gray-200 rounded transition">
+                <img src="https://api.dicebear.com/9.x/notionists/svg" alt="avatar" class="w-10 h-10 rounded bg-green-500 shadow"/>
+                <div class="ml-3 text-left">
+                    <p class="text-sm font-semibold">Victor Minas</p>
+                    <p class="text-xs text-gray-500">victorminas@callify.com</p>
+                </div>
+            </a>
+        </div>        
+
+        <!-- Búsqueda -->
+        <div class="relative mb-4">
+            <input type="text" placeholder="Buscar..." class="w-full p-2 pl-8 bg-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <span class="absolute left-2 top-2.5 text-gray-500">🔍</span>
+        </div>
+
+        <!-- Menú -->
+        <div class="space-y-2">
+            <a href="{% url 'dashboard' %}" class="flex items-center p-2 rounded hover:bg-gray-200 {% if request.path == '/dashboard/' %}bg-white shadow{% endif %}">
+                🏠 <span class="ml-2">Dashboard</span>
+            </a>
+            <a href="{% url 'profile' %}" class="flex items-center p-2 rounded hover:bg-gray-200 {% if request.path == '/dashboard/profile/' %}bg-white shadow{% endif %}">
+                👤 <span class="ml-2">Mi Perfil</span>
+            </a>
+            <a href="{% url 'phone_numbers' %}" class="flex items-center p-2 rounded hover:bg-gray-200 {% if request.path == '/dashboard/numbers/' %}bg-white shadow{% endif %}">
+                📞 <span class="ml-2">Números Telefónicos</span>
+            </a>
+            <a href="{% url 'integrations' %}" class="flex items-center p-2 rounded hover:bg-gray-200 {% if request.path == '/dashboard/integrations/' %}bg-white shadow{% endif %}">
+                🔗 <span class="ml-2">Integraciones</span>
+            </a>
+            <a href="{% url 'plans' %}" class="flex items-center p-2 rounded hover:bg-gray-200 {% if request.path == '/dashboard/plans/' %}bg-white shadow{% endif %}">
+                💰 <span class="ml-2">Planes</span>
+            </a>
+        </div>
+
+        <!-- Plan actual -->
+        <div class="mt-auto border-t pt-4 text-xs">
+            <p class="font-bold">Uso Empresarial</p>
+            <p class="text-gray-500">Plan Premium</p>
+            <button class="w-full mt-2 py-1.5 bg-gray-300 hover:bg-gray-400 rounded transition">
+                <a href="{% url 'support' %}">Soporte</a>
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

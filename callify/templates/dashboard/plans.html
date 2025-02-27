@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="p-6">
+    <h1 class="text-2xl font-bold mb-4">Plans & Pricing</h1>
+
+    <!-- Planes -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Plan Básico -->
+        <div class="bg-gray-900 text-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold">Basic</h2>
+            <p class="text-3xl font-semibold mt-2">$10<span class="text-lg">/mo</span></p>
+            <ul class="mt-4 space-y-2">
+                <li>✔ 1,000 API Calls</li>
+                <li>✔ Email Support</li>
+                <li>✖ No Custom Integrations</li>
+            </ul>
+            <button class="mt-4 bg-teal-500 hover:bg-teal-600 text-white py-2 px-4 rounded w-full">Choose Plan</button>
+        </div>
+
+        <!-- Plan Pro -->
+        <div class="bg-gray-900 text-white p-6 rounded-lg shadow-lg border-2 border-teal-500">
+            <h2 class="text-xl font-bold">Pro</h2>
+            <p class="text-3xl font-semibold mt-2">$29<span class="text-lg">/mo</span></p>
+            <ul class="mt-4 space-y-2">
+                <li>✔ 10,000 API Calls</li>
+                <li>✔ Priority Support</li>
+                <li>✔ Custom Integrations</li>
+            </ul>
+            <button class="mt-4 bg-teal-500 hover:bg-teal-600 text-white py-2 px-4 rounded w-full">Choose Plan</button>
+        </div>
+
+        <!-- Plan Enterprise -->
+        <div class="bg-gray-900 text-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold">Enterprise</h2>
+            <p class="text-3xl font-semibold mt-2">Custom</p>
+            <ul class="mt-4 space-y-2">
+                <li>✔ Unlimited API Calls</li>
+                <li>✔ Dedicated Support</li>
+                <li>✔ Custom SLA</li>
+            </ul>
+            <button class="mt-4 bg-teal-500 hover:bg-teal-600 text-white py-2 px-4 rounded w-full">Contact Us</button>
+        </div>
+    </div>
+
+    <!-- Comparación de características -->
+    <div class="bg-gray-900 text-white p-6 rounded-lg shadow-lg mt-8">
+        <h2 class="text-xl font-bold mb-4">Compare Plans</h2>
+        <table class="w-full border-collapse">
+            <thead>
+                <tr class="border-b">
+                    <th class="text-left p-2">Feature</th>
+                    <th class="text-center p-2">Basic</th>
+                    <th class="text-center p-2">Pro</th>
+                    <th class="text-center p-2">Enterprise</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b">
+                    <td class="p-2">API Calls</td>
+                    <td class="text-center">1,000</td>
+                    <td class="text-center">10,000</td>
+                    <td class="text-center">Unlimited</td>
+                </tr>
+                <tr class="border-b">
+                    <td class="p-2">Support</td>
+                    <td class="text-center">Email</td>
+                    <td class="text-center">Priority</td>
+                    <td class="text-center">Dedicated</td>
+                </tr>
+                <tr class="border-b">
+                    <td class="p-2">Custom Integrations</td>
+                    <td class="text-center">✖</td>
+                    <td class="text-center">✔</td>
+                    <td class="text-center">✔</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

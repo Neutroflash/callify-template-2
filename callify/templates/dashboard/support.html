@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex items-center justify-center h-[calc(100vh-32px-48px)] shadow rounded-lg bg-gray-900 text-white">
+    <div class="max-w-2xl text-center">
+        <!-- Icono -->
+        <div class="mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mx-auto text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M9.09 9a3 3 0 1 1 5.82 1c-.55 1.19-2 1.73-2.91 2.5-.69.58-.91 1.26-.91 2.5"/>
+                <line x1="12" y1="17" x2="12" y2="17"/>
+            </svg>
+        </div>
+
+        <!-- Título -->
+        <h2 class="text-3xl font-bold">How can we help you?</h2>
+        <p class="text-gray-400 mt-2">
+            Find answers to your questions or contact our support team.
+        </p>
+
+        <!-- FAQ -->
+        <div class="mt-6 space-y-4 text-left">
+            <details class="bg-gray-800 p-4 rounded-lg">
+                <summary class="font-semibold cursor-pointer">How do I connect my phone number?</summary>
+                <p class="mt-2 text-gray-400">You can connect a number from Twilio or Vonage. Go to the "Numbers" section and follow the setup instructions.</p>
+            </details>
+
+            <details class="bg-gray-800 p-4 rounded-lg">
+                <summary class="font-semibold cursor-pointer">What payment methods do you accept?</summary>
+                <p class="mt-2 text-gray-400">We accept credit/debit cards and PayPal. You can manage your billing in the "Billing" section.</p>
+            </details>
+
+            <details class="bg-gray-800 p-4 rounded-lg">
+                <summary class="font-semibold cursor-pointer">How can I reset my API key?</summary>
+                <p class="mt-2 text-gray-400">Go to "Settings" and click on "Generate New API Key". Make sure to store it securely.</p>
+            </details>
+        </div>
+
+        <!-- Botón de soporte -->
+        <div class="mt-6">
+            <button hx-post="/support-ticket/" hx-trigger="click" hx-target="#message" class="bg-teal-500 hover:bg-teal-600 text-white py-2 px-4 rounded-lg">
+                Open Support Ticket
+            </button>
+        </div>
+
+        <!-- Contacto -->
+        <div class="mt-6 text-gray-400">
+            <p>Need more help? Contact us at <a href="mailto:support@callify.com" class="text-teal-400">support@callify.com</a></p>
+        </div>
+
+        <!-- Mensaje de respuesta -->
+        <div id="message" class="mt-4 text-teal-400"></div>
+    </div>
+</div>
+{% endblock %}

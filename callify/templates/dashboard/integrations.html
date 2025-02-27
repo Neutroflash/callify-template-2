@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="p-6">
+    <h1 class="text-2xl font-bold mb-4">Integrations</h1>
+
+    <!-- Filtros y Búsqueda -->
+    <div class="flex justify-between items-center mb-4">
+        <div class="flex space-x-2">
+            <input type="text" placeholder="Search integrations..." class="border rounded p-2">
+            <select class="border rounded p-2">
+                <option value="">All Status</option>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+        </div>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Sync Now</button>
+    </div>
+
+    <!-- Tabla de Integraciones -->
+    <div class="bg-white shadow rounded-lg p-4">
+        <table class="w-full border-collapse">
+            <thead>
+                <tr class="border-b">
+                    <th class="text-left p-2">Integration</th>
+                    <th class="text-left p-2">Status</th>
+                    <th class="text-left p-2">Type</th>
+                    <th class="text-left p-2">Last Sync</th>
+                    <th class="text-left p-2">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b">
+                    <td class="p-2">Shopify</td>
+                    <td class="p-2"><span class="bg-green-200 text-green-800 px-2 py-1 rounded">Active</span></td>
+                    <td class="p-2">E-commerce</td>
+                    <td class="p-2">Feb 25, 2025</td>
+                    <td class="p-2">
+                        <a href="#" class="text-blue-500">View Logs</a>
+                    </td>
+                </tr>
+                <tr class="border-b">
+                    <td class="p-2">WhatsApp</td>
+                    <td class="p-2"><span class="bg-yellow-200 text-yellow-800 px-2 py-1 rounded">Pending</span></td>
+                    <td class="p-2">Messaging</td>
+                    <td class="p-2">Feb 24, 2025</td>
+                    <td class="p-2">
+                        <a href="#" class="text-blue-500">View Logs</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

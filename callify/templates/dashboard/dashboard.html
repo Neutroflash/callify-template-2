@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="p-6">
+    <h1 class="text-2xl font-bold mb-4">Overview Dashboard</h1>
+    
+    <!-- Tarjetas de métricas -->
+    <div class="grid grid-cols-4 gap-4">
+        <div class="bg-white shadow rounded-lg p-4">
+            <h2 class="font-semibold">Total Orders</h2>
+            <p class="text-3xl font-bold">4</p>
+            <p class="text-blue-500 mt-2"><a href="#">View Report</a></p>
+        </div>
+        
+        <div class="bg-white shadow rounded-lg p-4">
+            <h2 class="font-semibold">Confirmed Orders</h2>
+            <p class="text-3xl font-bold">3</p>
+            <p class="text-blue-500 mt-2"><a href="#">View Report</a></p>
+        </div>
+        
+        <div class="bg-white shadow rounded-lg p-4">
+            <h2 class="font-semibold">Canceled Orders</h2>
+            <p class="text-3xl font-bold">0</p>
+            <p class="text-blue-500 mt-2"><a href="#">View Report</a></p>
+        </div>
+        
+        <div class="bg-white shadow rounded-lg p-4">
+            <h2 class="font-semibold">Pending Orders</h2>
+            <p class="text-3xl font-bold">1</p>
+            <p class="text-blue-500 mt-2"><a href="#">View Report</a></p>
+        </div>
+    </div>
+
+    <!-- Cuenta y Pagos -->
+    <div class="bg-white shadow rounded-lg p-4 mt-6">
+        <h2 class="font-semibold border-b pb-2">Account and Payments</h2>
+        <div class="grid grid-cols-2 gap-4 mt-4">
+            <div>
+                <p class="text-gray-700"><strong>App Status:</strong> <span class="text-green-500">Enabled</span></p>
+                <p class="text-gray-700"><strong>App Mode:</strong> <span class="text-blue-500">Call & SMS Mode</span></p>
+            </div>
+            <div>
+                <p class="text-gray-700"><strong>Payment Mode:</strong> Trial</p>
+                <p class="text-gray-700"><strong>Remaining Credits:</strong> $0</p>
+                <p class="text-blue-500"><a href="#">+ Add Credits</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recuperación de Carritos -->
+    <div class="bg-white shadow rounded-lg p-4 mt-6">
+        <h2 class="font-semibold border-b pb-2">Abandoned Cart Recovery</h2>
+        <div class="grid grid-cols-3 gap-4 mt-4">
+            <div class="text-center">
+                <h3 class="text-gray-700 font-bold">Carts Recovered</h3>
+                <p class="text-2xl font-bold">-</p>
+            </div>
+            <div class="text-center">
+                <h3 class="text-gray-700 font-bold">Recovered Value</h3>
+                <p class="text-2xl font-bold">-</p>
+            </div>
+            <div class="text-center">
+                <h3 class="text-gray-700 font-bold">Recovery Messages Sent</h3>
+                <p class="text-2xl font-bold">-</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
