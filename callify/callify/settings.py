@@ -38,10 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "callify.accounts",
     "tailwind",
-    "callify.dashboard",
-    "callify.theme",  # Tailwind
     "django_htmx",
 ]
 
