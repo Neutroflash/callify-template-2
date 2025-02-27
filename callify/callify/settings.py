@@ -76,6 +76,13 @@ TEMPLATES = [
     },
 ]
 
+ALLOWED_HOSTS = [
+    "callify-template-2.onrender.com",
+    "localhost",
+    "127.0.0.1"
+]
+
+
 WSGI_APPLICATION = 'callify.wsgi.application'
 
 
